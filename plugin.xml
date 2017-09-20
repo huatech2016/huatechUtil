@@ -20,10 +20,11 @@
 		<source-file src="src/android/HuatechUtilPlugin.java" target-dir="src/net/huatech/plugin/"/>
     </platform>
 
+
     <platform name="ios">
         <config-file parent="/*" target="config.xml">
             <feature name="HuatechUtilPlugin">
-				<param name="ios-package" value="net.huatech.plugin.HuatechUtilPlugin"/>
+				<param name="ios-package" value="HuatechUtilPlugin"/>
 			</feature>
         </config-file>
         <source-file src="src/ios/HuatechUtilPlugin.m"/>

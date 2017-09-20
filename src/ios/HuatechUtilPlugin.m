@@ -1,5 +1,6 @@
-#import "Open.h"
 
+#import "HuatechUtilPlugin.h"
+#import <Cordova/CDVPluginResult.h>
 @implementation CDVUtil
 
 -(void)isFileExist:(CDVInvokedUrlCommand*)command{
@@ -15,13 +16,13 @@
         fileName  = arguments[1];
         extension =  [fileName pathExtension];  //aaa.doc -> doc
     }
-     NSString *storeName =[NSString stringWithFormat:@"%@.%@",fileId,extension];
+    // NSString *storeName =[NSString stringWithFormat:@"%@.%@",fileId,extension];
     NSLog(@"####  fileId is %@, fileName is %@",fileId,fileName);
 
     NSString *storeName =[NSString stringWithFormat:@"%@.%@",fileId,extension];
     NSString *tmpDir=[NSHomeDirectory() stringByAppendingPathComponent:@"tmp/files"];
-    NSString *storFile = [tmpDir stringByAppendingPathComponent:[NSString stringWithFormat:@"/%@",storeName]];
-    NSLog(@"####  storeName is %@,storeName);
+    NSString *storFile = [tmpDir stringByAppendingPathComponent:[NSString stringWithFormat:@"%@",storeName]];
+    NSLog(@"####  storeName is %@",storeName);
 
    NSFileManager *fileManager = [NSFileManager defaultManager];
    BOOL result = [fileManager fileExistsAtPath:storFile];
@@ -32,9 +33,7 @@
      } else {
          pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
      }
-
-
-       [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+      [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 
 }
 
