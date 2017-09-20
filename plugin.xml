@@ -19,4 +19,28 @@
         </config-file>
 		<source-file src="src/android/HuatechUtilPlugin.java" target-dir="src/net/huatech/plugin/"/>
     </platform>
+
+
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="Open">
+                <param name="ios-package" value="Open"/>
+            </feature>
+        </config-file>
+        <framework src="QuickLook.framework"/>
+        <framework src="Foundation.framework"/>
+        <source-file src="src/ios/Open.m"/>
+        <header-file src="src/ios/Open.h"/>
+    </platform>
+
+
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="HuatechUtilPlugin">
+				<param name="ios-package" value="net.huatech.plugin.HuatechUtilPlugin"/>
+			</feature>
+        </config-file>
+        <source-file src="src/ios/HuatechUtilPlugin.m"/>
+        <header-file src="src/ios/HuatechUtilPlugin.h"/>
+    </platform>
 </plugin>
