@@ -1,4 +1,4 @@
-#import "Open.h"
+#import "HuatechUtilPlugin.h"
 
 @implementation CDVUtil
 
@@ -18,10 +18,10 @@
      NSString *storeName =[NSString stringWithFormat:@"%@.%@",fileId,extension];
     NSLog(@"####  fileId is %@, fileName is %@",fileId,fileName);
 
-    NSString *storeName =[NSString stringWithFormat:@"%@.%@",fileId,extension];
+   // NSString *storeName =[NSString stringWithFormat:@"%@.%@",fileId,extension];
     NSString *tmpDir=[NSHomeDirectory() stringByAppendingPathComponent:@"tmp/files"];
     NSString *storFile = [tmpDir stringByAppendingPathComponent:[NSString stringWithFormat:@"/%@",storeName]];
-    NSLog(@"####  storeName is %@,storeName);
+    //NSLog(@"####  storeName is %@,storeName);
 
    NSFileManager *fileManager = [NSFileManager defaultManager];
    BOOL result = [fileManager fileExistsAtPath:storFile];
