@@ -20,7 +20,7 @@
 
     <platform name="ios">
         <config-file parent="/*" target="config.xml">
-            <feature name="HuatechUtilPlugin">
+            <feature name="HuaUtilPlugin">
 				<param name="ios-package" value="HuaUtilPlugin"/>
 			</feature>
         </config-file>

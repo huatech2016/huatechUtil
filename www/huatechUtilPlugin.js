@@ -28,7 +28,7 @@ var exec = require('cordova/exec');
 module.exports = {
 
     isFileExist: function(success,error,fileId,fileName) {
-        exec(success, error, "HuatechUtilPlugin", "isFileExist",[fileId,fileName]);
+        exec(success, error, "HuaUtilPlugin", "isFileExist",[fileId,fileName]);
     },
  };
 
