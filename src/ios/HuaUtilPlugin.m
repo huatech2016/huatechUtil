@@ -1,4 +1,4 @@
-#import "HuatechUtilPlugin.h"
+#import "HuaUtilPlugin.h"
 
 @implementation CDVUtil
 

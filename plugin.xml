@@ -2,10 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     id="cordova-plugin-huatechUtil"
     version="1.0">
-    
     <name>huatechUtil</name>
-    <description>huatechUtil for cordova plugin</description>
-    
     <!-- js module-->
     <js-module name="HuatechUtilPlugin" src="www/huatechUtilPlugin.js">
         <clobbers target="huatechUtil"/>
@@ -24,10 +21,10 @@
     <platform name="ios">
         <config-file parent="/*" target="config.xml">
             <feature name="HuatechUtilPlugin">
-				<param name="ios-package" value="HuatechUtilPlugin"/>
+				<param name="ios-package" value="HuaUtilPlugin"/>
 			</feature>
         </config-file>
-        <source-file src="src/ios/HuatechUtilPlugin.m"/>
-        <header-file src="src/ios/HuatechUtilPlugin.h"/>
+        <source-file src="src/ios/HuaUtilPlugin.m"/>
+        <header-file src="src/ios/HuaUtilPlugin.h"/>
     </platform>
 </plugin>

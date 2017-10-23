@@ -1,6 +1,5 @@
 #import <Cordova/CDVPlugin.h>
 
-@interface CDVUtil : CDVPlugin {}
-
+@interface CDVUtil : CDVPlugin
 - (void)isFileExist:(CDVInvokedUrlCommand*)command;
 @end
